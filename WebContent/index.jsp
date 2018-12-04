@@ -10,7 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome, please log in</title>
     
-    <link rel="stylesheet" href="$(pageContent.request.contextPath)/resources/css/styles.css">
+    <link type="text/css"
+    	  rel="stylesheet"
+    	  href="${pageContent.request.contextPath}/resources/css/styles.css">
 
   </head>
   <body>
