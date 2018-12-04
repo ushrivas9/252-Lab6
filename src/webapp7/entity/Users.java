@@ -1,6 +1,7 @@
 package webapp7.entity;
 
 public class Users{
+
 	private String username;
 	private String password;
 	public String getUsername() {
