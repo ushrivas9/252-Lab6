@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ushrivas.testdb.wrapRA;
-import com.ushrivas.webappdemo.entity.ResourceDetails;
-
 import testing.daysData;
 import webapp7.entity.Data;
 import webapp7.entity.Users;
@@ -31,9 +28,9 @@ public class Usercontroller {
 	private UserService service;
 	
 	@GetMapping("/login")
-	public String listCustomers(Model theModel) {
+	public String listCustomers(@ModelAttribute("Elem1") Users newEntry) {
 		
-		return "index.jsp";
+		return "index";
 		
 	}
 	
@@ -48,7 +45,7 @@ public class Usercontroller {
 		for(int i=0;i<details.size();i++) {
 			//check if user exists
 			if(details.get(i).getUsername().equals(newEntry.getUsername())) {
-				return "error-page";
+				return "error-page"; 
 			}		
 		}
 	

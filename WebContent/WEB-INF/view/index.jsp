@@ -19,6 +19,7 @@
     	  href="${pageContent.request.contextPath}/resources/css/styles.css">
   </head>
   <body>
+  <!-- Check if putting in body will make css work -->
   		<div id="container">
   			<h3>Login</h3>
   			<form:form action="saveUser" modelAttribute="Elem1" method="POST" autocomplete="off">
@@ -38,6 +39,7 @@
   					</tbody>
   				</table>
   			</form:form>
+  			
   		</div>
   </body>
 </html>
