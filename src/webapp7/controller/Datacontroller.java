@@ -28,9 +28,6 @@ import webapp7.service.DataService;
 
 
 
-
-
-
 @Controller
 @RequestMapping("/data")
 public class Datacontroller {
@@ -38,6 +35,7 @@ public class Datacontroller {
 	
 	String username="Upmanyu";
 	int week=1;
+	Users user1=new Users();
 	
 	@Autowired 
 	private DataService service;
@@ -61,7 +59,7 @@ public class Datacontroller {
 		
 		Data entryToAdd=new Data();
 		
-		entryToAdd.setUser(username);
+		entryToAdd.setUser(user1);
 		entryToAdd.setDate(newEntry.getDate());
 		entryToAdd.setWeek(week);
 		
