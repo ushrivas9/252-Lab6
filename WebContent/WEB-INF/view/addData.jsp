@@ -44,7 +44,7 @@ table.GeneratedTable th {
 				<table>
 					<tr>
 							<td>Date</td>
-							<td><form:input	path="date" /></td>
+							<td><form:input	path="date" placeholder=" ddMonyyyy"/></td>
 					</tr>
 				</table>
 				<br>
