@@ -16,7 +16,7 @@
     
     <link type="text/css"
     	  rel="stylesheet"
-    	  href="${pageContent.request.contextPath}/resources/css/styles.css">
+    	  href="${pageContext.request.contextPath}/resources/css/styles.css">
   </head>
   <body>
   <!-- Check if putting in body will make css work -->
