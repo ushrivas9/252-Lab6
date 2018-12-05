@@ -43,7 +43,7 @@ public class Datacontroller {
 	
 	
 	@GetMapping("/analytics")
-	public String Analytics (/*Model theModel*/@ModelAttribute("mapping1Form") Users newEntry,
+	public String Analytics (/*Model theModel*/@ModelAttribute("Elem1") Users newEntry,
 	        final BindingResult mapping1BindingResult,
 	        final Model theModel) {
 		

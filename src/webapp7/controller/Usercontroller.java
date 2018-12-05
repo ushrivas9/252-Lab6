@@ -37,7 +37,7 @@ public class Usercontroller {
 	}
 	
 	@PostMapping("/saveUser")
-	public String saveEntry(/*@ModelAttribute("Elem1") Users newEntry*/@ModelAttribute("mapping1Form") Users newEntry,
+	public String saveEntry(/*@ModelAttribute("Elem1") Users newEntry*/@ModelAttribute("Elem1") Users newEntry,
 	        final BindingResult mapping1BindingResult,
 	        final Model theModel, 
 	        final RedirectAttributes redirectAttributes) {
@@ -49,7 +49,9 @@ public class Usercontroller {
 		for(int i=0;i<details.size();i++) {
 			//check if user exists
 			if(details.get(i).getUsername().equals(newEntry.getUsername())) {
-				return "error-page"; 
+				if(!details.get(i).getPassword().equals(newEntry.getPassword())) {
+					return "error"; 
+				}
 			}		
 		}
 	
@@ -57,7 +59,7 @@ public class Usercontroller {
 		
 		///////////////////
 		
-        redirectAttributes.addFlashAttribute("mapping1Form", newEntry);
+        redirectAttributes.addFlashAttribute("Elem1", newEntry);
 		
 		//////////////////
 		return "redirect:/data/analytics";
