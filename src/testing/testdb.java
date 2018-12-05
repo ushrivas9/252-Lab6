@@ -24,7 +24,7 @@ public class testdb extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String user="root";
-		String pass="mysql90%";
+		String pass="foobar";
 		String jdbcurl="jdbc:mysql://localhost:3306/lab6?useSSL=false";
 		String driver="com.mysql.cj.jdbc.Driver";
 		
