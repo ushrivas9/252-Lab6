@@ -45,15 +45,19 @@ public class Usercontroller {
 		Configuration con=new Configuration().configure().addAnnotatedClass(Users.class);
 		
 		details=service.getDetails();
-		
+		boolean cont = false;
 		for(int i=0;i<details.size();i++) {
 			//check if user exists
 			if(details.get(i).getUsername().equals(newEntry.getUsername())) {
-				return "error-page"; 
+				//return "error-page";
+				cont = true;
 			}		
 		}
-	
-		service.saveEntry(newEntry);
+		if(!cont) {
+			service.saveEntry(newEntry);
+			//redirectAttributes.addFlashAttribute("mapping1Form", newEntry);
+		
+		}
 		
 		///////////////////
 		

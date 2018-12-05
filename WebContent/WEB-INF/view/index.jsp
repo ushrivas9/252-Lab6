@@ -15,7 +15,7 @@
     <title>Welcome, please log in</title>
     <link type="text/css"
     	  rel="stylesheet"
-    	  href="${pageContent.request.contextPath}/resources/css/styles.css">
+    	  href="${pageContext.request.contextPath}/resources/css/styles.css">
 
   </head>
   <body>
