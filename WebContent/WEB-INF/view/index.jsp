@@ -16,21 +16,21 @@
     
     <link type="text/css"
     	  rel="stylesheet"
-    	  href="${pageContent.request.contextPath}/resources/css/styles.css">
+    	  href="${pageContext.request.contextPath}/resources/css/styles.css">
   </head>
   <body>
   <!-- Check if putting in body will make css work -->
   		<div id="container">
-  			<h3>Login</h3>
+  			<h3 align="center">Login</h3>
   			<form:form action="saveUser" modelAttribute="Elem1" method="POST" autocomplete="off">
-  				<table>
+  				<table align="center">
   					<tbody>
   						<tr>
   							<td><label>Username</label></td>
-							<td><form:input	path="username" /></td>
+							<td><form:input	path="username" /></td><br>
 						
 							<td><label>Password</label></td>
-							<td><form:input	path="password" /></td>
+							<td><form:input	path="password" /></td><br>
   						</tr>
   						<tr>
 							<td><label></label></td>
@@ -39,6 +39,8 @@
   					</tbody>
   				</table>
   			</form:form>
-  		</div>
+  		</div> 
+  		
+  		
   </body>
 </html>
