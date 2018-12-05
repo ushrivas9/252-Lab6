@@ -24,14 +24,15 @@
   		<div id="container">
   			<h1 style="text-align:center;">Login</h1>
   			<form:form action="saveUser" modelAttribute="Elem1" method="POST" autocomplete="off">
-  				<table>
+  				<table align= "center">
   					<tbody>
   						<tr>
   							<td><label>Username</label></td>
 							<td><form:input	path="username" /></td>
-						
+						</tr>
+						<tr>
 							<td><label>Password</label></td>
-							<td><form:input	path="password" /></td>
+							<td><form:input path="password"/></td>
   						</tr>
   						<tr>
 							<td><label></label></td>
