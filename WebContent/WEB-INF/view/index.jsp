@@ -22,7 +22,7 @@
    
   <!-- Check if putting in body will make css work -->
   		<div id="container">
-  			<h3>Login</h3>
+  			<h1 style="text-align:center;">Login</h1>
   			<form:form action="saveUser" modelAttribute="Elem1" method="POST" autocomplete="off">
   				<table>
   					<tbody>
