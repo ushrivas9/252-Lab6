@@ -12,10 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class testdb
+ * Servlet implementation class test2
  */
-@WebServlet("/testdb")
-public class testdb extends HttpServlet {
+@WebServlet("/test2")
+public class test2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -33,7 +33,7 @@ public class testdb extends HttpServlet {
 			PrintWriter out=response.getWriter();
 			
 			out.println("Connecting to database: "+jdbcurl);
-			
+			System.out.println(" fkdsjlkadfs");
 			Class.forName(driver);
 			Connection myConn=DriverManager.getConnection(jdbcurl,user,pass);
 			
@@ -44,7 +44,7 @@ public class testdb extends HttpServlet {
 			exc.printStackTrace();
 			throw new ServletException(exc);
 		}
-	
+		
 	}
 
 }
