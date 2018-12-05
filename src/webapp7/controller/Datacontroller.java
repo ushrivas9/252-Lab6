@@ -38,17 +38,31 @@ public class Datacontroller {
 	int week=1;
 	Users user1=new Users();
 	
+	List<Data> details;
+	
 	@Autowired 
 	private DataService service;
 	
-	
 	@GetMapping("/analytics")
-	public String Analytics (/*Model theModel*/@ModelAttribute("Elem1") Users newEntry,
+	public String Tester(/*Model theModel*/@ModelAttribute("Elem1") Users newEntry,
 	        final BindingResult mapping1BindingResult,
 	        final Model theModel) {
 		
 		username=newEntry.getUsername();
 		user1=newEntry;
+		
+		return "redirect:/data/analytics1";
+	}
+	
+	
+	@GetMapping("/analytics1")
+	public String Analytics (Model theModel/*@ModelAttribute("Elem1") Users newEntry,
+	        final BindingResult mapping1BindingResult,
+	        final Model theModel*/) {
+		
+		
+		details=service.getDetails(username);
+		theModel.addAttribute("List",details); 
 		
 		System.out.println("This is the username:"+username);
 		
@@ -86,7 +100,7 @@ public class Datacontroller {
 		entryToAdd.setEarning(weeklyEar);
 
 		service.saveEntry(entryToAdd);
-		return "analytics_add";
+		return "redirect:/data/analytics1";
 	}	
 	
 }

@@ -4,65 +4,97 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
+<style>
+table.GeneratedTable {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #3399ff;
+  border-style: solid;
+  color: #000000;
+}
+table.GeneratedTable td{
+  border-width: 2px;
+  border-color: #3399ff;
+  border-style: solid;
+  padding: 3px;
+}
+table.GeneratedTable th {
+  border-width: 2px;
+  border-color: #3399ff;
+  border-style: solid;
+  padding: 3px;
+  background-color: #99ccff;
+}
+</style>
+
+<head>
 		<title>Add Weekly Data</title>
-	</head>
-	
-	<body>
+</head>
+<body>
 		<div id="wrapper">
 			<div id="header">	
 				<h2>Add Weekly Data</h2>
 			</div>		
 		</div>
-		
-		<div id="container">
-			<h3>Save Data</h3>
+      	<div id="container">
+			<h3 align="center">Input Data</h3>
 			<form:form action="saveData" modelAttribute="Elem" method="POST" autocomplete="off">
 				<table>
-					<tbody>
-						<tr>
+					<tr>
 							<td>Date</td>
 							<td><form:input	path="date" /></td>
-						</tr>
-						<tr>
-						</tr>
-						<tr>
-							<td><label>           </label></td>
-							<td><label>Monday</label></td>
-							<td><label>Tuesday</label></td>
-							<td><label>Wednesday</label></td>
-							<td><label>Thursday</label></td>
-							<td><label>Friday</label></td>
-							<td><label>Saturday</label></td>
-							<td><label>Sunday</label></td>
-						</tr>
-						<tr>
-							<td>Expenditure</td>
-							<td><form:input	path="exp1" /></td>
-							<td><form:input	path="exp2" /></td>
-							<td><form:input	path="exp3" /></td>
-							<td><form:input	path="exp4" /></td>
-							<td><form:input	path="exp5" /></td>
-							<td><form:input	path="exp6" /></td>
-							<td><form:input	path="exp7" /></td>
-						</tr>
-						<tr>
-							<td>Earnings</td>
-							<td><form:input	path="ear1" /></td>
-							<td><form:input	path="ear2" /></td>
-							<td><form:input	path="ear3" /></td>
-							<td><form:input	path="ear4" /></td>
-							<td><form:input	path="ear5" /></td>
-							<td><form:input	path="ear6" /></td>
-							<td><form:input	path="ear7" /></td>
-						</tr>
-						<tr>
-							<td><label></label></td>
-							<td><input type="submit" value="Save Data" class="save"/></td>
-						</tr>
-					</tbody>
+					</tr>
 				</table>
+				<br>
+				<table class="GeneratedTable">
+					
+    				<tr>
+      					<th></th>
+      					<th>Expenditure</th>
+                		<th>Earnings</th>
+    				</tr>
+  					<tbody>
+      					<tr>
+     						<th>Monday</th>
+							<td><form:input	path="exp1" /></td>
+							<td><form:input	path="ear1" /></td>
+    					</tr>
+      					<tr>
+     						<th>Tuesday</th>
+							<td><form:input	path="exp2" /></td>
+							<td><form:input	path="ear2" /></td>
+    					</tr>
+    					<tr>
+         					<th>Wednesday</th>
+							<td><form:input	path="exp3" /></td>
+							<td><form:input	path="ear3" /></td>
+    					</tr>
+        				<tr>
+         					<th>Thursday</th>
+							<td><form:input	path="exp4" /></td>
+							<td><form:input	path="ear4" /></td>
+    					</tr>
+            			<tr>
+         					<th>Friday</th>
+							<td><form:input	path="exp5" /></td>
+							<td><form:input	path="ear5" /></td>
+    					</tr>
+            			<tr>
+         					<th>Saturday</th>
+							<td><form:input	path="exp6" /></td>
+							<td><form:input	path="ear6" /></td>
+    					</tr>
+            			<tr>
+         					<th>Sunday</th>
+							<td><form:input	path="exp7" /></td>
+							<td><form:input	path="ear7" /></td>
+    					</tr>
+      				</tbody>
+      			</table>
+			<p><input type="submit" value="Save Data" class="save"></p>
 			</form:form>
-		</div>
-	</body>
+	</div>
+</body>
 </html>
