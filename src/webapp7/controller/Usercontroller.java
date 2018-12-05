@@ -6,10 +6,12 @@ import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import testing.daysData;
 import webapp7.entity.Data;
@@ -28,16 +30,18 @@ public class Usercontroller {
 	private UserService service;
 	
 	@GetMapping("/login")
-	public String listCustomers(@ModelAttribute("Elem1") Users newEntry) {
+	public String loginP(@ModelAttribute("Elem1") Users newEntry) {
 		
 		return "index";
 		
 	}
 	
 	@PostMapping("/saveUser")
-	public String saveEntry(@ModelAttribute("Elem1") Users newEntry) {
+	public String saveEntry(/*@ModelAttribute("Elem1") Users newEntry*/@ModelAttribute("mapping1Form") Users newEntry,
+	        final BindingResult mapping1BindingResult,
+	        final Model theModel, 
+	        final RedirectAttributes redirectAttributes) {
 		
-		////////
 		Configuration con=new Configuration().configure().addAnnotatedClass(Users.class);
 		
 		details=service.getDetails();
@@ -49,9 +53,14 @@ public class Usercontroller {
 			}		
 		}
 	
-		////////
 		service.saveEntry(newEntry);
-		return "redirect:/analystics_add";
+		
+		///////////////////
+		
+        redirectAttributes.addFlashAttribute("mapping1Form", newEntry);
+		
+		//////////////////
+		return "redirect:/data/analytics";
 		
 	}
 

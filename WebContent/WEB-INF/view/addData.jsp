@@ -22,7 +22,7 @@
 					<tbody>
 						<tr>
 							<td><label>Monday</label></td>
-						<td><form:input	path="soeid" /></td>
+							<td><form:input	path="soeid" /></td>
 						</tr>
 					</tbody>
 				</table>
