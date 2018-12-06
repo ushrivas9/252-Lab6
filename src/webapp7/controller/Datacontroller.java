@@ -15,6 +15,7 @@ import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,12 +34,41 @@ import webapp7.service.DataService;
 public class Datacontroller {
 	
 	
-	String username="Upmanyu";
+	String username="NOOL";
 	int week=1;
 	Users user1=new Users();
 	
+	List<Data> details;
+	
 	@Autowired 
 	private DataService service;
+	
+	@GetMapping("/analytics")
+	public String Tester(/*Model theModel*/@ModelAttribute("Elem1") Users newEntry,
+	        final BindingResult mapping1BindingResult,
+	        final Model theModel) {
+		
+		username=newEntry.getUsername();
+		user1=newEntry;
+		
+		return "redirect:/data/analytics1";
+	}
+	
+	
+	@GetMapping("/analytics1")
+	public String Analytics (Model theModel/*@ModelAttribute("Elem1") Users newEntry,
+	        final BindingResult mapping1BindingResult,
+	        final Model theModel*/) {
+		
+		
+		details=service.getDetails(username);
+		theModel.addAttribute("List",details); 
+		
+		System.out.println("This is the username:"+username);
+		
+		return "analytics_add";
+		
+	}
 	
 	
 	@GetMapping("/showFormForAdd")
@@ -70,8 +100,7 @@ public class Datacontroller {
 		entryToAdd.setEarning(weeklyEar);
 
 		service.saveEntry(entryToAdd);
-		return "redirect:/details/list";
+		return "redirect:/data/analytics1";
 	}	
 	
-
 }
