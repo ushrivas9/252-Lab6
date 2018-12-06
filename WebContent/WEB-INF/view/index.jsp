@@ -66,7 +66,7 @@ h1,h2,h3,h4,h5,h6 {
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
   	<div style= "text-align: middle; position: fixed; top: 50%; left: 25%; right: 25%; bottom: 25%; color: #ffffff;">
-  	<b>WELCOME TO YOUR PERSONAL WEEKLY PROFIT DATA</b>
+  	<b>WELCOME TO SMALL BUSINESS ANALYTICS</b>
   	</div>
   	
   	<div style="position: absolute; left: 10px; top: 40px;"> 
