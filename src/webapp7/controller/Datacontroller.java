@@ -50,6 +50,8 @@ public class Datacontroller {
 		username=newEntry.getUsername();
 		user1=newEntry;
 		
+		
+		
 		System.out.println("This is the username:"+username);
 		
 		return "analytics_add";
