@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .vis {visibility: visible}
 </style>
-<body background ="<c:url value='/resources/messi.jpg'/>">
+<body background ="<c:url value='/resources/images.jpg'/>">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -46,11 +46,11 @@ h1,h2,h3,h4,h5,h6 {
 </div>
 
 <!-- Header -->
-<!-- <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img src="C:\Users\Joseph Schmidt\eclipse-workspace\webapp7\WebContent\WEB-INF\view\messi.jpg" alt="No Image2" align="">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-  </div>
-</header> -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  	<div style= "text-align: middle; position: fixed; top: 25%; left: 25%; right: 25%; bottom: 25%; color: #ffffff; font-size: 50px;">
+  	WELCOME TO YOUR PERSONAL WEEKLY PROFIT DATABASE! 
+  	</div>
+</header>
 
 </body>
 </html>
