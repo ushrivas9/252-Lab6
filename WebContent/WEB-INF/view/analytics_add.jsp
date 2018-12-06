@@ -26,6 +26,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">YOUR DATA</a> 
   <a href="#divide" onclick="w3_close()" class="w3-bar-item w3-button">GRAPHS</a>
    <a href="#" onclick="location.href='showFormForAdd'; return false;" class="w3-bar-item w3-button">ADD DATA</a>
+       <a href="#" onclick="location.href='logout'; return false;" class="w3-bar-item w3-button">LOG OUT</a>
 </nav>
 
 <!-- Top menu on small screens -->
