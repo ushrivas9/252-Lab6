@@ -5,16 +5,26 @@
 <style>
 table.GeneratedTable {
   width: 100%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'ushrivas' of https://github.com/ushrivas9/252-Lab6
   border-collapse: collapse;
   border-width: 2px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'ushrivas' of https://github.com/ushrivas9/252-Lab6
  
   
 }
 table.GeneratedTable td{
   border-width: 2px;
+<<<<<<< HEAD
 
+=======
+  background-color:  #ffffff;
+>>>>>>> branch 'ushrivas' of https://github.com/ushrivas9/252-Lab6
   
   padding: 3px;
 }
@@ -78,7 +88,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 				<table>
 					<tr>
 							<td>Date</td>
-							<td><form:input	path="date" placeholder=" ddMonyyyy"/></td>
+							<td><form:input	path="date" placeholder=" dd Mon yyyy"/></td>
 					</tr>
 				</table>
 				<br>
@@ -146,8 +156,11 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> branch 'ushrivas' of https://github.com/ushrivas9/252-Lab6
 </script>
 </body>
 </html>

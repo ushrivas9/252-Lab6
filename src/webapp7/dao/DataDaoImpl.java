@@ -27,9 +27,15 @@ public class DataDaoImpl implements DataDao {
 		
 		List<Data> details=theQuery.getResultList();
 		
+		System.out.println("LEN:"+details.size());
+		
 		for(int i=0;i<details.size();i++) {
-			if(!details.get(i).getUser().equals(user)) {
-				details.remove(details.get(i));
+			String tocheck=new String(details.get(i).getUser().getUsername());
+			if(tocheck.equals(user)) {
+			}
+			else {
+				details.remove(i);
+				i--;
 			}
 		}
 		
@@ -47,15 +53,13 @@ public class DataDaoImpl implements DataDao {
 	}
 
 	@Override
-	public void deleteEntry(int week, String user) {
+	public void deleteEntry(String user) {
 		
 		Session currentSession=sessionFactory.getCurrentSession();
 		
-		Query<?> theQuery=currentSession.createQuery("delete from Data where user=:rId1 and week=:rId2");
+		Query<?> theQuery=currentSession.createQuery("delete from Data where user=:rId1");
 			
 		theQuery.setParameter("rId1", user);
-		
-		theQuery.setParameter("rId2", week);
 			
 		theQuery.executeUpdate();
 

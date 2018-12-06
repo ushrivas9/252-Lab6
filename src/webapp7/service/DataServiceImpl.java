@@ -33,9 +33,9 @@ public class DataServiceImpl implements DataService {
 
 	@Override
 	@Transactional
-	public void deleteEntry(int week, String user) {
+	public void deleteEntry(String user) {
 		
-		dao.deleteEntry(week,user);
+		dao.deleteEntry(user);
 
 	}
 

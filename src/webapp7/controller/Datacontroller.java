@@ -34,7 +34,7 @@ import webapp7.service.DataService;
 public class Datacontroller {
 	
 	
-	String username="NOOL";
+	String username="NULL";
 	int week=1;
 	Users user1=new Users();
 	
@@ -62,9 +62,42 @@ public class Datacontroller {
 		
 		
 		details=service.getDetails(username);
-		theModel.addAttribute("List",details); 
 		
+		for(int i=0;i<details.size();i++) {
+			System.out.println(details.get(i).getId());
+		}
+		
+		theModel.addAttribute("List",details); 
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		ArrayList<Integer> pro=new ArrayList<Integer>();
+		
+		if(details.size()<=4) {
+			for(int i = 0; i<details.size(); i++) {
+				int p = details.get(i).getEarning() - details.get(i).getExpenditure();
+				pro.add(p);
+			}
+		}
+		else {
+			for(int i = details.size()-4; i<details.size(); i++) {
+				int p = details.get(i).getEarning() - details.get(i).getExpenditure();
+				pro.add(p);
+			}
+		}
+		
+		String s="";
+		
+		if(pro.size()>0) {
+			Object[] arr = pro.toArray();
+			s+=arr[0];
+			for(int i = 1; i< arr.length; i++) {
+				s+= "|" + arr[i];
+			}
+		}
+		theModel.addAttribute("STRING",s);
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		System.out.println("This is the username:"+username);
+		
+		theModel.addAttribute("NAME",username);
 		
 		return "analytics_add";
 		

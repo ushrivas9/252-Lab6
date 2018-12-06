@@ -12,13 +12,11 @@ table.GeneratedTable {
   background-color: 000000;
   border-collapse: collapse;
   border-width: 2px;
-
  
   
 }
 table.GeneratedTable td{
   border-width: 2px;
-
   
   padding: 3px;
 }
@@ -30,7 +28,6 @@ table.GeneratedTable th {
   color: #000000;
   background-color:  #f1f1f1;
 }
-
 </style>
 <title>SMALL BUSINESS ANALYTICS</title>
 <meta charset="UTF-8">
@@ -38,7 +35,8 @@ table.GeneratedTable th {
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+body,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+h1 {font-family: "Raleway", sans-serif; color: #ffffff; text-align:center; font-size:110px }
 .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
 .w3-third img:hover{opacity: 1}
 </style>
@@ -52,7 +50,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!--<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> --> 
   <a href="#divide" onclick="w3_close()" class="w3-bar-item w3-button">GRAPHS</a>
   <a href="#" onclick="location.href='showFormForAdd'; return false;" class="w3-bar-item w3-button">ADD DATA</a>
-    <a href="#" onclick="location.href='ogout'; return false;" class="w3-bar-item w3-button">LOG OUT</a>
+    <a href="#" onclick="location.href='logout'; return false;" class="w3-bar-item w3-button">LOG OUT</a>
 </nav>
 
 <!-- Top menu on small screens -->
@@ -155,18 +153,25 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-grey">  
+ 
+  <div class="w3-container w3-padding-32 w3-grey">  
+      <div>
+        <h4 align="center"><b>PERCENTAGE ${CHANGE} OVER THE LAST WEEK </b></h4>
+        <h1><b>${PERC}</b></h1>      
+      </div>
+    </div>
+    
+      <!-- Footer -->
+  <footer style="background-color:  #616161; text-color=#ffffff">  
     <div >
       <div >
+      	<br></br>
         <h3 align="center">INFORMATION</h3>
-        <p>Call Upmanyu Srivastava if this page doesn't meet your expectations. His fault. Thank you.</p>      
+        <p>Email customerservice@email.com if you have issues with the website. Have a good day!</p>      
       </div>
-    
-      
-  
     </div>
   </footer>
+
   
 <script>
 // Script to open and close sidebar
@@ -179,10 +184,3 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-
-
-</script>
-
-
-</body>
-</html>

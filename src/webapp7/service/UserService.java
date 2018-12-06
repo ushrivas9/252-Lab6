@@ -9,5 +9,7 @@ public interface UserService {
 	public List<Users> getDetails();
 	
 	public void saveEntry(Users table);
+	
+	public void deleteEntry(String user);
 
 }
