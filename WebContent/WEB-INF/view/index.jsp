@@ -65,9 +65,12 @@ h1,h2,h3,h4,h5,h6 {
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-  </div>
+  	<div style= "text-align: middle; position: fixed; top: 50%; left: 25%; right: 25%; bottom: 25%; color: #ffffff;">
+  	<b>WELCOME TO YOUR PERSONAL WEEKLY PROFIT DATA</b>
+  	</div>
 </header>
+
+<input type="image" src="<c:url value='/resources/images/hidden.png'/>" name="saveForm" class="btTxt submit" id="saveForm" />
 
 </body>
 </html>

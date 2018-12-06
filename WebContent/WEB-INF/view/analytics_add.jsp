@@ -153,11 +153,12 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-grey">  
+  <footer style="background-color:  #616161; text-color=#ffffff">  
     <div >
       <div >
+      	<br></br>
         <h3 align="center">INFORMATION</h3>
-        <p>Email customerservice@email.com if you have issues with the website. Good Luck with your day</p>      
+        <p>Email customerservice@email.com if you have issues with the website. Have a good day!</p>      
       </div>
     </div>
   </footer>

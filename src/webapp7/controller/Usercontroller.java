@@ -51,7 +51,14 @@ public class Usercontroller {
 		
 		Configuration con=new Configuration().configure().addAnnotatedClass(Users.class);
 		
+		
+		if(newEntry.getUsername()=="") {
+			return "redirect:/userpage/login";
+		}
+		
+		
 		details=service.getDetails();
+		
 		
 		for(int i=0;i<details.size();i++) {
 			//check if user exists
@@ -76,6 +83,10 @@ public class Usercontroller {
 	        final RedirectAttributes redirectAttributes) {
 		
 		Configuration con=new Configuration().configure().addAnnotatedClass(Users.class);
+		
+		if(newEntry.getUsername()=="") {
+			return "redirect:/userpage/login";
+		}
 		
 		details=service.getDetails();
 		
@@ -118,6 +129,13 @@ public class Usercontroller {
 		}
 		
 		return "redirect:/userpage/login";
+		
+	}
+	
+	@GetMapping("/goback")
+	public String back (Model theModel) {
+		
+		return "redirect:/data/analytics1";
 		
 	}
 	
