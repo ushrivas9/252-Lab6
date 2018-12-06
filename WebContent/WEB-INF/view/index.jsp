@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6 {
 							<td><form:input	path="username" /></td>
 						
 							<td><label>Password</label></td>
-							<td><form:input	path="password" /></td>
+							<td><input	type="password" id="password" name="password" /></td>
   			
 							<td><label></label></td>
 							<td><input type="submit" value="Login" class="save"/></td>
@@ -50,7 +50,7 @@ h1,h2,h3,h4,h5,h6 {
 							<td><form:input	path="username" /></td>
 						
 							<td><label>Password</label></td>
-							<td><form:input	path="password" /></td>
+							<td><input	type="password" id="password" name="password" /></td>
   			
 							<td><label></label></td>
 							<td><input type="submit" value="Create Account" class="save"/></td>

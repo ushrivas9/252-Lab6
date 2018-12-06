@@ -136,4 +136,17 @@ public class Datacontroller {
 		return "redirect:/data/analytics1";
 	}	
 	
+	@GetMapping("/logout")
+	public String lout (Model theModel) {
+		
+		return "redirect:/userpage/login";
+	}
+	
+	@GetMapping("/goback")
+	public String back (Model theModel) {
+		
+		return "redirect:/data/analytics1";
+	}
+	
+	
 }
