@@ -12,6 +12,6 @@ public interface DataService {
 	
 	public void saveEntry(Data table);
 	
-	public void deleteEntry(String user);
+	public void deleteEntry(int id);
 
 }

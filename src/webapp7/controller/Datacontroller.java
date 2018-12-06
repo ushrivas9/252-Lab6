@@ -68,7 +68,7 @@ public class Datacontroller {
 		}
 		
 		theModel.addAttribute("List",details); 
-		///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
 		ArrayList<Integer> pro=new ArrayList<Integer>();
 		
 		if(details.size()<=4) {
@@ -94,10 +94,52 @@ public class Datacontroller {
 			}
 		}
 		theModel.addAttribute("STRING",s);
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		System.out.println("This is the username:"+username);
 		
 		theModel.addAttribute("NAME",username);
+		
+		//////////////////////////////////////////////////////////////////////////
+		
+		
+		if(pro.size()>1) {
+			double x=(double)pro.get(pro.size()-1);
+			double y=(double)pro.get(pro.size()-2);
+			
+			String change="";
+			
+			if(y==0) {
+				String perc="Infinity";
+				change=""+"YOU DONT HAVE A % INCREASE";
+				theModel.addAttribute("PERC",perc);
+				theModel.addAttribute("CHANGE",change);
+				
+			}
+			else {
+				double perc1=((x-y)/y)*100.0;
+				int perc=(int)perc1;
+			
+				if(perc<0) {
+					perc=-perc;
+					change=""+"PERCENTAGE DECREASE OVER THE LAST WEEK";
+					theModel.addAttribute("PERC",perc);
+					theModel.addAttribute("CHANGE",change);
+				}
+				else {
+					change=""+"PERCENTAGE INCREASE OVER THE LAST WEEK";
+					theModel.addAttribute("PERC",perc);
+					theModel.addAttribute("CHANGE",change);
+				}
+			}
+		}
+		else {
+			String change="";
+			int perc=0;
+			theModel.addAttribute("CHANGE",change);
+			theModel.addAttribute("PERC",perc);
+		}
+		
+		
+		/////////////////////////////////////////////////////////////////////////
 		
 		return "analytics_add";
 		
@@ -148,5 +190,21 @@ public class Datacontroller {
 		return "redirect:/data/analytics1";
 	}
 	
+	@GetMapping("/delete")
+	public String deleteEntry(@RequestParam("rId4") int id1, Model theModel) {
+		
+		service.deleteEntry(id1);
+		
+		/*try {
+			service.deleteEntry(id1);
+		}
+		catch(ConstraintViolationException e) {
+			
+			return "redirect:/details/list";
+		}*/
+		
+		return "redirect:/data/analytics1";
+		
+	}
 	
 }

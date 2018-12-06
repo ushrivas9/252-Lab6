@@ -115,27 +115,10 @@ public class Usercontroller {
 	}
 	
 	
-	@GetMapping("/delete")
-	public String deleteEntry(@RequestParam("rId1") String id1, Model theModel) {
+	@GetMapping("/hid")
+	public String hidden (Model theModel) {
 		
-		service2.deleteEntry(id1);
-		
-		try {
-			service.deleteEntry(id1);
-		}
-		catch(ConstraintViolationException e) {
-			
-			return "redirect:/userpage/login";
-		}
-		
-		return "redirect:/userpage/login";
-		
-	}
-	
-	@GetMapping("/goback")
-	public String back (Model theModel) {
-		
-		return "redirect:/data/analytics1";
+		return "hid";
 		
 	}
 	

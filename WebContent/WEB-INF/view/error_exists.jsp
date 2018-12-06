@@ -17,10 +17,10 @@
   </head>
   <body>
   		<div id="container">
-  			<h2>Error! Username already exists!</h3>
+  			<h1>Error! Username already exists!</h1>
   		</div>
   		<p>
-			<a href="${pageContext.request.contextPath}/userpage/login">Back to Login</a>
+			<a href="${pageContext.request.contextPath}/userpage/login" style="font-size:40px">Back to Login</a>
 		</p>
   </body>
 </html>

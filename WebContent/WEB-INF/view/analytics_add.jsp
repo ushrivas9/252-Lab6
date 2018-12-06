@@ -35,7 +35,8 @@ table.GeneratedTable th {
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+body,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+h1 {font-family: "Raleway", sans-serif; color: #ffffff; text-align:center; font-size:110px }
 .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
 .w3-third img:hover{opacity: 1}
 </style>
@@ -79,12 +80,16 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   						<th>Date</th>
   						<th>Earnings</th>
   						<th>Expenditure</th>
+  					 <th>Delete</th>
   					</tr>
   						<c:forEach var="tempElem"  items="${List}">
+                        <c:url var="deleteLink" value="/data/delete">
+                        <c:param name="rId4" value="${tempElem.id}"/></c:url>
 							<tr>	
 								<td>${tempElem.date}</td>
 								<td>${tempElem.earning}</td>
 								<td>${tempElem.expenditure}</td>
+                                <td><a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this?'))) return false"> Delete</a></td>
 							</tr>
 						</c:forEach>
   				</table>
@@ -150,6 +155,16 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   	</div>
       
     </div>
+  </div>
+  
+  <!-- Percentage -->
+  
+  <div class="w3-container w3-padding-32 w3-grey">  
+      <div>
+        <!-- <h4 align="center"><b>PERCENTAGE ${CHANGE} OVER THE LAST WEEK </b></h4> -->
+        <h4 align="center"><b>${CHANGE}</b></h4>
+        <h1><b>${PERC}%</b></h1>      
+      </div>
   </div>
 
   <!-- Footer -->

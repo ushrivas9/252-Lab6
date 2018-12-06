@@ -53,13 +53,13 @@ public class DataDaoImpl implements DataDao {
 	}
 
 	@Override
-	public void deleteEntry(String user) {
+	public void deleteEntry(int id) {
 		
 		Session currentSession=sessionFactory.getCurrentSession();
 		
-		Query<?> theQuery=currentSession.createQuery("delete from Data where user=:rId1");
+		Query<?> theQuery=currentSession.createQuery("delete from Data where id=:rId4");
 			
-		theQuery.setParameter("rId1", user);
+		theQuery.setParameter("rId4", id);
 			
 		theQuery.executeUpdate();
 

@@ -68,9 +68,12 @@ h1,h2,h3,h4,h5,h6 {
   	<div style= "text-align: middle; position: fixed; top: 50%; left: 25%; right: 25%; bottom: 25%; color: #ffffff;">
   	<b>WELCOME TO YOUR PERSONAL WEEKLY PROFIT DATA</b>
   	</div>
+  	
+  	<div style="position: absolute; left: 10px; top: 40px;"> 
+    <img src="<c:url value='/resources/images/hidden.png'/>" width="114" height="38" onclick="hidden" />
+</div>
+  	
 </header>
-
-<input type="image" src="<c:url value='/resources/images/hidden.png'/>" name="saveForm" class="btTxt submit" id="saveForm" />
 
 </body>
 </html>
