@@ -50,7 +50,7 @@ public class Datacontroller {
 		username=newEntry.getUsername();
 		user1=newEntry;
 		
-		
+		theModel.addAttribute("NAME", username);
 		
 		System.out.println("This is the username:"+username);
 		

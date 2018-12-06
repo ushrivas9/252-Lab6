@@ -1,53 +1,4 @@
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<!DOCTYPE html>
-<html>
-
-<script>
-	document.write("<style>body{zoom:65%;}</style>");
-</script>
-
-  <head>  	
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome, please log in</title>
-    <link type="text/css"
-    	  rel="stylesheet"
-    	  href="${pageContext.request.contextPath}/resources/css/styles.css">
-
-  </head>
-  <body>
-   
-  <!-- Check if putting in body will make css work -->
-  		<div id="container">
-  			<h1 style="text-align:center;">Login</h1>
-  			<form:form action="saveUser" modelAttribute="Elem1" method="POST" autocomplete="off">
-  				<table align= "center">
-  					<tbody>
-  						<tr>
-  							<td><label>Username</label></td>
-							<td><form:input	path="username" /></td>
-						</tr>
-						<tr>
-							<td><label>Password</label></td>
-							<td><form:input path="password"/></td>
-  						</tr>
-  						<tr>
-							<td><label></label></td>
-							<td><input type="submit" value="Login" class="save"/></td>
-					</tr>
-  					</tbody>
-  				</table>
-  			</form:form>
-  		</div>
-  </body>
-</html>
-
- --%>
- 
- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -63,8 +14,10 @@ h1,h2,h3,h4,h5,h6 {
     font-family: "Playfair Display";
     letter-spacing: 5px;
 }
+
+.vis {visibility: visible}
 </style>
-<body background ="C:\Users\Joseph Schmidt\eclipse-workspace\webapp7\WebContent\WEB-INF\view\messi.jpg">
+<body background ="<c:url value='/resources/messi.jpg'/>">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -93,11 +46,11 @@ h1,h2,h3,h4,h5,h6 {
 </div>
 
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <!-- <img src="C:\Users\Joseph Schmidt\eclipse-workspace\webapp7\WebContent\WEB-INF\view\messi.jpg" alt="No Image2" align=""> -->
+<!-- <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img src="C:\Users\Joseph Schmidt\eclipse-workspace\webapp7\WebContent\WEB-INF\view\messi.jpg" alt="No Image2" align="">
   <div class="w3-display-bottomleft w3-padding-large w3-opacity">
   </div>
-</header>
+</header> -->
 
 </body>
 </html>
