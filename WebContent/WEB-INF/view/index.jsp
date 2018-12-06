@@ -47,8 +47,8 @@ h1,h2,h3,h4,h5,h6 {
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  	<div style= "text-align: middle; position: fixed; top: 25%; left: 25%; right: 25%; bottom: 25%; color: #ffffff; font-size: 50px;">
-  	WELCOME TO YOUR PERSONAL WEEKLY PROFIT DATABASE! 
+  	<div style= "text-align: middle; position: fixed; top: 50%; left: 25%; right: 25%; bottom: 25%; color: #ffffff;">
+  	WELCOME TO YOUR PERSONAL WEEKLY PROFIT DATA
   	</div>
 </header>
 
