@@ -17,7 +17,11 @@
   </head>
   <body>
   		<div id="container">
-  			<h3>Error, sign up and log in error</h3>
+  			<h2>Error! Username Doesn't Match Password</h3>
   		</div>
+  		
+  		<p>
+			<a href="${pageContext.request.contextPath}/userpage/login">Back to Login</a>
+		</p>
   </body>
 </html>

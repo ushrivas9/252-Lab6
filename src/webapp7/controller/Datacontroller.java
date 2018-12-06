@@ -34,7 +34,7 @@ import webapp7.service.DataService;
 public class Datacontroller {
 	
 	
-	String username="NOOL";
+	String username="NULL";
 	int week=1;
 	Users user1=new Users();
 	
@@ -84,15 +84,20 @@ public class Datacontroller {
 			}
 		}
 		
-		Object[] arr = pro.toArray();
-		String s = ""+arr[0];
-		for(int i = 1; i< arr.length; i++) {
-			s+= "|" + arr[i];
+		String s="";
+		
+		if(pro.size()>0) {
+			Object[] arr = pro.toArray();
+			s+=arr[0];
+			for(int i = 1; i< arr.length; i++) {
+				s+= "|" + arr[i];
+			}
 		}
-		//int[] arr = new int[]{ 10,8,7,6,5};
 		theModel.addAttribute("STRING",s);
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		System.out.println("This is the username:"+username);
+		
+		theModel.addAttribute("NAME",username);
 		
 		return "analytics_add";
 		

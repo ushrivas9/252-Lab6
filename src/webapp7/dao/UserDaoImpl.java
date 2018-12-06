@@ -38,5 +38,18 @@ public class UserDaoImpl implements UserDao {
 		currentSession.saveOrUpdate(table);
 
 	}
+	
+	@Override
+	public void deleteEntry(String user) {
+		
+		Session currentSession=sessionFactory.getCurrentSession();
+			
+		Query<?> theQuery=currentSession.createQuery("delete from users where username=:rId1");
+			
+		theQuery.setParameter("rId1", user);
+			
+		theQuery.executeUpdate();
+		
+	}
 
 }

@@ -15,12 +15,13 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 5px;
 }
 </style>
-<body>
+<body background ="<c:url value='/resources/images/streetart2.jpg'/>">
+
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <h5 class="w3-bar-item w3-button">Small Business Analytics</h3>
+    <h5 class="w3-bar-item w3-button">Small Business Analytics</h5>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <form:form action="saveUser" modelAttribute="Elem1" method="POST" autocomplete="off">
@@ -35,6 +36,25 @@ h1,h2,h3,h4,h5,h6 {
   			
 							<td><label></label></td>
 							<td><input type="submit" value="Login" class="save"/></td>
+
+						</tr>
+  					</tbody>
+  				</table>
+  		</form:form>
+  		
+  		<form:form action="saveUser1" modelAttribute="Elem1" method="POST" autocomplete="off">
+  				<table>
+  					<tbody>
+  						<tr>
+  							<td><label>Username</label></td>
+							<td><form:input	path="username" /></td>
+						
+							<td><label>Password</label></td>
+							<td><form:input	path="password" /></td>
+  			
+							<td><label></label></td>
+							<td><input type="submit" value="Create Account" class="save"/></td>
+
 						</tr>
   					</tbody>
   				</table>
@@ -45,7 +65,6 @@ h1,h2,h3,h4,h5,h6 {
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="hamburger.jpg" alt="No Image2" width="1600" height="800">
   <div class="w3-display-bottomleft w3-padding-large w3-opacity">
   </div>
 </header>

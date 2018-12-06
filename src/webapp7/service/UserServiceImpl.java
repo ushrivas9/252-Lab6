@@ -30,5 +30,13 @@ public class UserServiceImpl implements UserService {
 		dao.saveEntry(table);
 
 	}
+	
+	@Override
+	@Transactional
+	public void deleteEntry(String user) {
+		
+		dao.deleteEntry(user);
+
+	}
 
 }
