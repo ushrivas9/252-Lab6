@@ -80,12 +80,16 @@ h1 {font-family: "Raleway", sans-serif; color: #ffffff; text-align:center; font-
   						<th>Date</th>
   						<th>Earnings</th>
   						<th>Expenditure</th>
+  					    <th>Delete</th>
   					</tr>
   						<c:forEach var="tempElem"  items="${List}">
+                        <c:url name="deleteLink" value="/details/delete">
+                        <c:param name="rId4" value="${tempElem.id}"/></c:url>
 							<tr>	
 								<td>${tempElem.date}</td>
 								<td>${tempElem.earning}</td>
 								<td>${tempElem.expenditure}</td>
+                                <td><a href=${deleteLink} onclick="if(!(confirm('Are you sure you want to delete this?'))) return false"> Delete</a></td>
 							</tr>
 						</c:forEach>
   				</table>
