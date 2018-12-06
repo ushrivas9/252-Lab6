@@ -46,9 +46,54 @@
 							</tr>
 						</c:forEach>
   				</table>
+  				
   				<h6>*All Earnings and Expenditures are displayed by week</h6>
   			</div>
   		</div>
+  		<div id="piechart">
+  			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  			
+  			<script type="text/javascript">
+			// Load google charts
+			google.charts.load('current', {packages: ['corechart', 'line']});
+			google.charts.setOnLoadCallback(drawChart);
+			//var profits = [8, 6, 1, 7];
+			var profits = '${STRING}';
+			//alert(profits);
+			
+			var arrayFromJava = profits.split("|");
+			 
+			alert(arrayFromJava);
+			
+			// Draw the chart and set the chart values
+			function drawChart() {
+  				var data = new google.visualization.DataTable();
+  				data.addColumn('number', 'Week');
+  				data.addColumn('number', 'Profit');
+  				var i;
+  				//data.addRow([0,0]);
+  				for(i = 0; i < arrayFromJava.length; i++){
+  					data.addRow([i+1, parseInt(arrayFromJava[i],10)]);
+  				}
+  				
+  				// Optional; add a title and set the width and height of the chart
+  				// var options = {'title':'My Average Day', 'width':550, 'height':400};
+  
+  				var options = {'title': 'Weekly Profit', 'width':550, 'height':300,
+  				hAxis: {
+    			title: 'Week'
+    			},
+    			vAxis: {
+    				title: 'Amount'
+    			},
+    			colors: ['#a52714'],
+    			};
+  				// Display the chart inside the <div> element with id="piechart"
+  				var chart = new google.visualization.LineChart(document.getElementById('piechart'));
+  				chart.draw(data, options);
+			}
+		</script>		
+  	</div>
   </body>
 </html>
 

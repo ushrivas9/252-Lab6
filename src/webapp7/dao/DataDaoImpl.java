@@ -28,7 +28,10 @@ public class DataDaoImpl implements DataDao {
 		List<Data> details=theQuery.getResultList();
 		
 		for(int i=0;i<details.size();i++) {
-			if(!details.get(i).getUser().equals(user)) {
+			if(details.get(i).getUser().getUsername().equals(user)) {
+				
+			}
+			else {
 				details.remove(details.get(i));
 			}
 		}
